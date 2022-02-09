@@ -1,11 +1,22 @@
 
 public class TriangleRect extends Figure {
 
+    double base;
+    double hauteur;
+
     TriangleRect(Segment seg1, Segment seg2, Segment seg3) {
 
         segment1 = new Segment(seg1.ptSegDeb, seg1.ptSegFin);
         segment2 = new Segment(seg2.ptSegDeb, seg2.ptSegFin);
         segment3 = new Segment(seg3.ptSegDeb, seg3.ptSegFin);
+    }
+
+    @Override
+    public double getSurface() {
+        System.out.print("Triangle : ");
+        base = (segment1.ptSegFin.getX() - segment1.ptSegDeb.getX());
+        hauteur = (segment2.ptSegFin.getY() - segment2.ptSegDeb.getY());
+        return ((base * hauteur) / 2);
     }
 
     @Override

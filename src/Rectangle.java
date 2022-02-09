@@ -16,7 +16,10 @@ public class Rectangle extends Figure{
 
     @Override
     public double getSurface() {
-        return 0;
+        System.out.print("Rectangle : ");
+        width = (segment4.ptSegFin.getX() - segment4.ptSegDeb.getX());
+        height = (segment1.ptSegFin.getY() - segment1.ptSegDeb.getY());
+        return (width * height);
     }
 
     @Override

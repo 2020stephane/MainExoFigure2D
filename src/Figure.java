@@ -1,5 +1,5 @@
 
-public abstract class Figure extends Segment implements IDrawable, IMoveable{
+public abstract class Figure extends Segment implements IDrawable, IMoveable, ISurface{
 
     protected Segment segment1;
     protected Segment segment2;
@@ -11,11 +11,6 @@ public abstract class Figure extends Segment implements IDrawable, IMoveable{
     public Figure(Point pt1, Point pt2, Point pt3) {  }
     public Figure(Point pt1, Point pt2, Point pt3, Point pt4) { }
     public Figure(Segment segment1, Segment segment2) { }
-
-    public double getSurface() {
-        return 0;
-    }
-
 
     @Override
     public void seDessiner() {

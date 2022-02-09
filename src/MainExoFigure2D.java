@@ -33,16 +33,25 @@ public class MainExoFigure2D {
         Rectangle monRect = new Rectangle(HorztDown, RightVert, HorztUp , LeftVert) ;
 
         Figure[] figure = { monTriangle, monRect } ;
-        for( int i = 0 ; i < figure.length ; i++ ){
+        for( int i = 0; i < figure.length; i++ ){
             figure[i].seDessiner() ;
         }
         //i= 0;
         System.out.println("deplacement de x= x+1 y= y+1");
-        for( int i = 0 ; i < figure.length ; i++ )
-            figure[i].translate(1, 1); ;
+        for( int i = 0; i < figure.length; i++ ) {
+            figure[i].translate(1, 1);
+        }
         System.out.println("position apres deplacement" );
-        for( int i = 0 ; i < figure.length ; i++ ){
+        for( int i = 0; i < figure.length; i++ ) {
             figure[i].seDessiner() ;
         }
+        System.out.println("surface des figures " );
+        for( int i = 0; i < figure.length; i++ ) {
+            System.out.println(figure[i].getSurface());
+        }
+        if ( (monRect).isLargerThan(monTriangle) > 0)
+            System.out.println("surface rectangle > surface triangle");
+        if ( (monRect).isLargerThan(monTriangle) < 0)
+            System.out.println("surface triangle > surface rectangle");
     }
 }
