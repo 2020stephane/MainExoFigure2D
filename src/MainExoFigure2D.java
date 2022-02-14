@@ -32,6 +32,7 @@ public class MainExoFigure2D {
 
         Rectangle monRect = new Rectangle(HorztDown, RightVert, HorztUp , LeftVert) ;
 
+
         Figure[] figure = { monTriangle, monRect } ;
         for( int i = 0; i < figure.length; i++ ){
             figure[i].seDessiner() ;
