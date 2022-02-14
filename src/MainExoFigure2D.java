@@ -58,5 +58,7 @@ public class MainExoFigure2D {
             System.out.println("surface rectangle > surface triangle");
         if ( (monRect).isLargerThan(monTriangle) < 0)
             System.out.println("surface triangle > surface rectangle");
+        System.out.println( ptLeftDown.distance(ptRightDown));
+
     }
 }

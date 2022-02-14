@@ -42,13 +42,17 @@ public class Point {
     public void setY(int y) {
         this.y = y;
     }
+    public double distance(Point pt) {
+
+        //double d = Math.sqrt( Math.pow((pt.getX() - this.getX()),2) + Math.pow((pt.getY() - this.getY()),2) );
+        double d = Math.sqrt( (  (pt.getX() - this.getX()) * (pt.getX() - this.getX()) ) +
+                ((pt.getY() - this.getY()) * (pt.getY() - this.getY()) ) );
+        return d;
+    }
 
 
     public  String getName() {
         return name;
     }
-    public double distance(Point pt) {
-        double val = 0;
-        return val;
-    }
+
 }

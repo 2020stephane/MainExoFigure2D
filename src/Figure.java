@@ -1,10 +1,6 @@
 
 public abstract class Figure extends Segment implements IDrawable, IMoveable, ISurface{
 
-    protected Segment segment1;
-    protected Segment segment;
-    protected Segment segment3;
-    protected Segment segment4;
     protected Segment[] seg;
 
     public Figure() { }
