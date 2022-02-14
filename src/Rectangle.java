@@ -6,42 +6,43 @@ public class Rectangle extends Figure{
     private double height;
 
     public Rectangle(Segment seg1, Segment seg2, Segment seg3, Segment seg4) {
-        segment1 = new Segment(seg1.ptSegDeb, seg1.ptSegFin);
-        segment2 = new Segment(seg2.ptSegDeb, seg2.ptSegFin);
-        segment3 = new Segment(seg3.ptSegDeb, seg3.ptSegFin);
-        segment4 = new Segment(seg4.ptSegDeb, seg4.ptSegFin);
+        seg = new Segment[4];
+        seg[0] = new Segment(seg1.ptSegDeb, seg1.ptSegFin);
+        seg[1] = new Segment(seg2.ptSegDeb, seg2.ptSegFin);
+        seg[2] = new Segment(seg3.ptSegDeb, seg3.ptSegFin);
+        seg[3] = new Segment(seg4.ptSegDeb, seg4.ptSegFin);
     }
     public Rectangle(Point pt1, Point pt2, Point pt3, Point pt4) { }
     public Rectangle(Point pt1, int x, int y) { }
 
     @Override
     public double getSurface() {
-        System.out.print("Rectangle : ");
-        width = (segment4.ptSegFin.getX() - segment4.ptSegDeb.getX());
-        height = (segment1.ptSegFin.getY() - segment1.ptSegDeb.getY());
+
+        width = (seg[0].ptSegFin.getX() - seg[0].ptSegDeb.getX());
+        height = (seg[1].ptSegFin.getY() - seg[1].ptSegDeb.getY());
         return (width * height);
     }
 
     @Override
     public void seDessiner() {
         System.out.println("dessin d'un rectangle :");
-        segment1.dessine(1);
-        segment2.dessine(2);
-        segment3.dessine(3);
-        segment4.dessine(4);
+        seg[0].dessine(1);
+        seg[1].dessine(2);
+        seg[2].dessine(3);
+        seg[3].dessine(4);
     }
 
     @Override
     public void translate(int x, int y) {
 
-        segment1.ptSegDeb.setX( segment1.ptSegDeb.getX() +1);
-        segment1.ptSegDeb.setY( segment1.ptSegDeb.getY() +1);
-        segment2.ptSegDeb.setX( segment2.ptSegDeb.getX() +1);
-        segment2.ptSegDeb.setY( segment2.ptSegDeb.getY() +1);
-        segment3.ptSegFin.setX( segment3.ptSegFin.getX() +1);
-        segment3.ptSegFin.setY( segment3.ptSegFin.getY() +1);
-        segment4.ptSegFin.setX( segment3.ptSegFin.getX() +1);
-        segment4.ptSegFin.setY( segment3.ptSegFin.getY() +1);
+        seg[0].ptSegDeb.setX( seg[0].ptSegDeb.getX() +1);
+        seg[0].ptSegDeb.setY( seg[0].ptSegDeb.getY() +1);
+        seg[1].ptSegDeb.setX( seg[1].ptSegDeb.getX() +1);
+        seg[1].ptSegDeb.setY( seg[1].ptSegDeb.getY() +1);
+        seg[2].ptSegFin.setX( seg[2].ptSegFin.getX() +1);
+        seg[2].ptSegFin.setY( seg[2].ptSegFin.getY() +1);
+        seg[3].ptSegFin.setX( seg[2].ptSegFin.getX() +1);
+        seg[3].ptSegFin.setY( seg[2].ptSegFin.getY() +1);
 
     }
 }

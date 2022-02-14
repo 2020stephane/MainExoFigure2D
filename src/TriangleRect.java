@@ -6,34 +6,35 @@ public class TriangleRect extends Figure {
 
     TriangleRect(Segment seg1, Segment seg2, Segment seg3) {
 
-        segment1 = new Segment(seg1.ptSegDeb, seg1.ptSegFin);
-        segment2 = new Segment(seg2.ptSegDeb, seg2.ptSegFin);
-        segment3 = new Segment(seg3.ptSegDeb, seg3.ptSegFin);
+        seg = new Segment[3];
+        seg[0] = new Segment(seg1.ptSegDeb, seg1.ptSegFin);
+        seg[1] =  new Segment(seg2.ptSegDeb, seg2.ptSegFin);
+        seg[2] =  new Segment(seg3.ptSegDeb, seg3.ptSegFin);
     }
 
     @Override
     public double getSurface() {
-        System.out.print("Triangle : ");
-        base = (segment1.ptSegFin.getX() - segment1.ptSegDeb.getX());
-        hauteur = (segment2.ptSegFin.getY() - segment2.ptSegDeb.getY());
+
+        base = (seg[0].ptSegFin.getX() - seg[0].ptSegDeb.getX());
+        hauteur = (seg[1].ptSegFin.getY() - seg[1].ptSegDeb.getY());
         return ((base * hauteur) / 2);
     }
 
     @Override
     public void seDessiner() {
         System.out.println("dessin d'un triangle :");
-        segment1.dessine(1);
-        segment2.dessine(2);
-        segment3.dessine(3);
+        seg[0].dessine(1);
+        seg[1].dessine(2);
+        seg[2].dessine(3);
     }
     @Override
     public void translate(int x, int y) {
-        segment1.ptSegDeb.setX( segment1.ptSegDeb.getX() +1);
-        segment1.ptSegDeb.setY( segment1.ptSegDeb.getY() +1);
-        segment2.ptSegFin.setX( segment2.ptSegFin.getX() +1);
-        segment2.ptSegFin.setY( segment2.ptSegFin.getY() +1);
-        segment3.ptSegDeb.setX( segment3.ptSegDeb.getX() +1);
-        segment3.ptSegDeb.setY( segment3.ptSegDeb.getY() +1);
+        seg[0].ptSegDeb.setX(  seg[0].ptSegDeb.getX() +1);
+        seg[0].ptSegDeb.setY(  seg[0].ptSegDeb.getY() +1);
+        seg[1].ptSegFin.setX( seg[1].ptSegFin.getX() +1);
+        seg[1].ptSegFin.setY( seg[1].ptSegFin.getY() +1);
+        seg[2].ptSegDeb.setX( seg[2].ptSegDeb.getX() +1);
+        seg[2].ptSegDeb.setY( seg[2].ptSegDeb.getY() +1);
 
     }
 }

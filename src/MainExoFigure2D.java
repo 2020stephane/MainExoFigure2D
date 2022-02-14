@@ -21,9 +21,9 @@ public class MainExoFigure2D {
 
 
         Point ptLeftDown = new Point( 0 , 0, "W" ) ;
-        Point ptRightDown = new Point( 0 , 2, "X" ) ;
+        Point ptRightDown = new Point( 3 , 0, "X" ) ;
         Point ptRightUp = new Point( 3 , 2, "Y" ) ;
-        Point ptLeftUp = new Point( 3 , 0, "Z" ) ;
+        Point ptLeftUp = new Point( 0 , 2, "Z" ) ;
 
         Segment HorztDown = new Segment (ptLeftDown, ptRightDown);
         Segment HorztUp = new Segment (ptLeftUp, ptRightUp);
@@ -47,6 +47,11 @@ public class MainExoFigure2D {
         }
         System.out.println("surface des figures " );
         for( int i = 0; i < figure.length; i++ ) {
+            if (figure[i]  instanceof Rectangle) {
+                System.out.print("Rectangle : ");
+            } else {
+                System.out.print("Triangle : ");
+            }
             System.out.println(figure[i].getSurface());
         }
         if ( (monRect).isLargerThan(monTriangle) > 0)
