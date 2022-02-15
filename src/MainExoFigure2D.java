@@ -19,7 +19,6 @@ public class MainExoFigure2D {
 
         TriangleRect monTriangle = new TriangleRect(Base, AjdacentVert, Hypotenus);
 
-
         Point ptLeftDown = new Point( 0 , 0, "W" ) ;
         Point ptRightDown = new Point( 3 , 0, "X" ) ;
         Point ptRightUp = new Point( 3 , 2, "Y" ) ;
@@ -37,6 +36,7 @@ public class MainExoFigure2D {
         for( int i = 0; i < figure.length; i++ ){
             figure[i].seDessiner() ;
         }
+
         //i= 0;
         System.out.println("deplacement de x= x+1 y= y+1");
         for( int i = 0; i < figure.length; i++ ) {
@@ -55,11 +55,11 @@ public class MainExoFigure2D {
             }
             System.out.println(figure[i].getSurface());
         }
-        if ( (monRect).isLargerThan(monTriangle) > 0)
+        if ( monRect.isLargerThan(monTriangle) > 0)
             System.out.println("surface rectangle > surface triangle");
-        if ( (monRect).isLargerThan(monTriangle) < 0)
+        if ( monRect.isLargerThan(monTriangle) < 0)
             System.out.println("surface triangle > surface rectangle");
-        System.out.println( ptLeftDown.distance(ptRightDown));
+        System.out.println("distance entre 2 pts"  + ptLeftDown.distance(ptRightDown));
 
     }
 }

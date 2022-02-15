@@ -29,12 +29,12 @@ public class TriangleRect extends Figure {
     }
     @Override
     public void translate(int x, int y) {
-        seg[0].ptSegDeb.setX(  seg[0].ptSegDeb.getX() +1);
-        seg[0].ptSegDeb.setY(  seg[0].ptSegDeb.getY() +1);
-        seg[1].ptSegFin.setX( seg[1].ptSegFin.getX() +1);
-        seg[1].ptSegFin.setY( seg[1].ptSegFin.getY() +1);
-        seg[2].ptSegDeb.setX( seg[2].ptSegDeb.getX() +1);
-        seg[2].ptSegDeb.setY( seg[2].ptSegDeb.getY() +1);
+        seg[0].ptSegDeb.setX(  seg[0].ptSegDeb.getX() +x);
+        seg[0].ptSegDeb.setY(  seg[0].ptSegDeb.getY() +y);
+        seg[1].ptSegFin.setX( seg[1].ptSegFin.getX() +x);
+        seg[1].ptSegFin.setY( seg[1].ptSegFin.getY() +y);
+        seg[2].ptSegDeb.setX( seg[2].ptSegDeb.getX() +x);
+        seg[2].ptSegDeb.setY( seg[2].ptSegDeb.getY() +y);
 
     }
 }

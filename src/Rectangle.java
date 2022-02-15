@@ -35,14 +35,14 @@ public class Rectangle extends Figure{
     @Override
     public void translate(int x, int y) {
 
-        seg[0].ptSegDeb.setX( seg[0].ptSegDeb.getX() +1);
-        seg[0].ptSegDeb.setY( seg[0].ptSegDeb.getY() +1);
-        seg[1].ptSegDeb.setX( seg[1].ptSegDeb.getX() +1);
-        seg[1].ptSegDeb.setY( seg[1].ptSegDeb.getY() +1);
-        seg[2].ptSegFin.setX( seg[2].ptSegFin.getX() +1);
-        seg[2].ptSegFin.setY( seg[2].ptSegFin.getY() +1);
-        seg[3].ptSegFin.setX( seg[2].ptSegFin.getX() +1);
-        seg[3].ptSegFin.setY( seg[2].ptSegFin.getY() +1);
+        seg[0].ptSegDeb.setX( seg[0].ptSegDeb.getX() +x);
+        seg[0].ptSegDeb.setY( seg[0].ptSegDeb.getY() +y);
+        seg[1].ptSegDeb.setX( seg[1].ptSegDeb.getX() +x);
+        seg[1].ptSegDeb.setY( seg[1].ptSegDeb.getY() +y);
+        seg[2].ptSegFin.setX( seg[2].ptSegFin.getX() +x);
+        seg[2].ptSegFin.setY( seg[2].ptSegFin.getY() +y);
+        seg[3].ptSegFin.setX( seg[2].ptSegFin.getX() +x);
+        seg[3].ptSegFin.setY( seg[2].ptSegFin.getY() +y);
 
     }
 }

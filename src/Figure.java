@@ -1,5 +1,5 @@
 
-public abstract class Figure extends Segment implements IDrawable, IMoveable, ISurface{
+public abstract class Figure  extends Segment implements IDrawable, IMoveable, ISurface{
 
     protected Segment[] seg;
 

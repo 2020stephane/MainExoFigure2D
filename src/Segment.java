@@ -1,4 +1,4 @@
-public class Segment extends Point{
+public class Segment {
 
     protected Point ptSegDeb;
     protected Point ptSegFin;
@@ -10,7 +10,7 @@ public class Segment extends Point{
         this.ptSegFin = ptSegFin;
     }
 
-    public void translate(int x, int y) { }
+    //public void translate(int x, int y) { }
     public  void dessine(int i) {
         System.out.println("segment"+ i + "->" + ptSegDeb.getName() + ":" + ptSegDeb.getX() +
                 ";" + ptSegDeb.getY() + "  " + ptSegFin.getName() + ":" + ptSegFin.getX() +

@@ -8,4 +8,5 @@ public interface ISurface {
         else if (this.getSurface() > other.getSurface()) return 1;
         else return 0;
     }
+
 }
